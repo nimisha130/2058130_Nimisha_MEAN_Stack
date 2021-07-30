@@ -1,0 +1,38 @@
+h1{
+    
+    color: red;border-style: solid; border-width: 1px; border-color:brown; background-color:yellowgreen;
+
+}
+
+h3{
+    
+    color: blueviolet;border-style: solid; border-width: 1px; border-color:brown;
+
+}
+
+div{
+    
+    color: blue; font-size: 30px;
+}
+
+p{
+    color: black; font-size: 20px;
+}
+
+li{
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+
+}
+a:hover{         /*hover is called psuedoclass*/
+    background-color: gold;
+    color: white;
+    font-style: italic;
+}
+body{
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEXcv6Z/AUUkAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII=);
+}
