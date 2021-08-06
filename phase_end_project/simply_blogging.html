@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="menu_operation.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        .center {
+            margin: auto;
+            width: 30%;
+            border: 5px;
+            padding: 100px;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div style="background-color: bisque;">
+    <h1>Welcome to Blogging</h1>
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" href="#"><u>Home</u></a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#"><u>About Us</u></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><u>Contact Us</u></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><u>Add Blog</u></a>
+        </li>
+    </ul>
+    
+    
+    <div class="center">    
+        <h2>Add Blog</h2>
+            
+        Title :<input type="text" id="title"/>
+        <br/>
+        Article :<textarea id="article" name="article" rows="4" cols="50"></textarea>
+        <br/>
+        Image URL :<input type="url" alt="" id="pic"/>
+        <br/>
+        <!---Image: <input type="url()" alt="" id="img"/>--->
+    </br>
+        <input type="button" value="Add Blog" onclick="addData()"/>  
+
+        </br>
+        
+        <div id="info"></div>
+    </div>           
+    
+          
+</body>
+</html>

@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 30%;
+    border: 5px;
+    padding: 100px;
+    
+}
