@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <style>
+        h2{
+            text-align: center;
+            background-color: aqua;
+        }
+        a{
+            position: relative;
+            right:  50px;
+        }
+    </style>
+</head>
+<body onload="cartCheckout()">
+    <h2>Fresh Fruit Market</h2>
+<br/>
+    <div align="right"><a href="index.html"><button type="button">Home Page</button></a></div>
+<br/>
+    <h4><u>Cart Checkout</u></h4>
+</br>
+    <div class="container">
+        <table border="1">
+            <tr>
+                <th>Item</th>
+                <th>Number of Items</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+            <tbody id="table">
+                
+            </tbody>
+            </tr>
+        </table>
+        <div><span>Total:</span>$<span id = "totalPrice">0.00</span></div>
+    </div>
+
+    
+</body>
+</html>

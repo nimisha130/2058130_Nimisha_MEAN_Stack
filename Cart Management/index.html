@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <style>
+        h2{
+            text-align: center;
+            background-color: aqua;
+        }
+        div{
+            text-align:left;
+        }
+        .center{
+            position: relative;
+            right: 100px;
+        }
+
+    </style>
+    
+</head>
+<body onload="addToAmount">
+    <h2>Fresh Fruit Market</h2>
+</br>
+    <div class="container">
+    <span align="right"><u>Cart Size: </u></span><span id="cartSize">0.00</span>
+    </div>
+    <!-- <a href="checkoutpage.html"><button>Cart Checkout</button></a> -->
+    
+    <div align="right"><a href="checkoutpage.html"><button type="button">Cart Checkout</button></a></div>
+<br/>
+
+    <div class="row card_size"> 
+        <div class="col-6">
+            <div class="card">
+                <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/1/5/5/3/533551-1-eng-GB/Apple-polyphenols-may-slash-inflammation-marker-levels-change-gut-microbiota.jpg" alt="Apple" height="300">
+                <div class="class-body center">
+                    <div class="row">
+                        <div class="col-6"> Item Name: </div>
+                        <div class="col-6">Apple</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"> Price: </div>
+                        <div class="col-6">$4.99</div>
+                    </div>
+                    <input type="submit" value="Add" onclick="addToItem()"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <img src="https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG-1200-80.jpg" alt="Banana" height="300">
+                <div class="class-body center">
+                    <div class="row">
+                        <div class="col-6"> Item Name: </div>
+                        <div class="col-6">Banana</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"> Price: </div>
+                        <div class="col-6">$1.49</div>
+                    </div>
+                    <input type="submit" value="Add" onclick="addToItem()"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <img src="https://www.lgssales.com/wp-content/uploads/2017/07/darling-oranges-1.png" alt="Orange" height="300">
+                <div class="class-body center">
+                    <div class="row">
+                        <div class="col-6"> Item Name: </div>
+                        <div class="col-6">Orange</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"> Price: </div>
+                        <div class="col-6">$3.99</div>
+                    </div>
+                    <input type="submit" value="Add" onclick="addToItem()"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <img src="https://static.libertyprim.com/files/familles/fraise-large.jpg?1569271765" alt="Strawberry" height="300">
+                <div class="class-body center">
+                    <div class="row">
+                        <div class="col-6"> Item Name: </div>
+                        <div class="col-6">Strawberry</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6"> Price: </div>
+                        <div class="col-6">$2.49</div>
+                    </div>
+                    <input type="submit" value="Add" onclick="addToItem()"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
