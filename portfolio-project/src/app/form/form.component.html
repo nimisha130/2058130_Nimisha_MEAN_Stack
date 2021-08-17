@@ -1,0 +1,83 @@
+<div>
+    <div *ngIf="signupflag">
+    
+        <h3>Sign Up</h3>
+
+    <form #signupRef="ngForm" (ngSubmit)="userSignup(signupRef)">
+        <label>FirstName:</label>
+        <input type="text" name="fname" ngModel required/><br/>
+        <label>LastName:</label>
+        <input type="text" name="lname" ngModel required/><br/>
+        <label>UserName:</label>
+        <input type="text" name="loginuser" ngModel required/><br/>
+        <label>Password:</label>
+        <input type="password" name="loginpass" ngModel required minlength="8"/><br/>
+        
+        <input type="submit" value="Submit" [disabled]="!signupRef.valid"/>
+        <input type="reset" value="Clear" (click)="signupRef.reset()"/>
+
+    </form>
+    </div>
+
+
+
+    <div *ngIf="loginflag">
+    
+        <h3>Login</h3>
+
+    <form #loginRef="ngForm" (ngSubmit)="userLogin(loginRef)">
+        <label>UserName:</label>
+        <input type="text" name="username" ngModel required minlength="6"/><br/>
+        <label>Password:</label>
+        <input type="password" name="pass" ngModel required minlength="8"/><br/>
+
+        <input type="submit" value="Submit" [disabled]="!loginRef.valid"/>
+        <input type="reset" value="Clear" (click)="loginRef.reset()"/>
+
+    </form>
+    {{loginRef.valid}}
+
+    </div>
+
+
+    <div *ngIf="homeflag">
+    
+        <h3>Portfolio Home Page</h3>
+
+    
+        <h5>Welcome {{username}}</h5>
+    <br/>
+
+    <form #nameRef="ngForm" (ngSubmit)="addData(nameRef)">
+        <label>Name</label>
+        <input type="text" name="contactName" ngModel required/><br/>
+        <label>Phone Number</label>
+        <input type="text" name="cellNumber" ngModel required/><br/>
+
+        <input type="submit" value="Save" [disabled]="!nameRef.valid"/>
+        <input type="reset" value="Clear"/>
+
+    </form>
+
+    <input type="submit" value="Contact Info" class="contact" (click)="loadData()"/>
+
+    <br/>
+
+    <table border="1" *ngIf="tableflag">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+
+        <tr *ngFor="let contact of tableInfo">
+            <td>{{contact.contact}}</td>
+            <td>{{contact.cell}}</td>
+        </tr>
+        
+    </table>
+
+    </div>
+
+</div>
+
+
