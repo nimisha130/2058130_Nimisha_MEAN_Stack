@@ -1,0 +1,52 @@
+<div>
+    <h3>Task Tracker</h3>
+
+    <div>
+        <form #trackRef="ngForm" (ngSubmit)="addData(trackRef)">
+            <mat-form-field appearance="fill">
+                <mat-label>Id</mat-label>
+                <input matInput name="id" ngModel/>
+              </mat-form-field>
+              <br/>
+              <mat-form-field appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput name="name" ngModel/>
+              </mat-form-field>
+              <br/>
+              <mat-form-field appearance="fill">
+                <mat-label>Task</mat-label>
+                <textarea matInput name="task" ngModel></textarea>
+              </mat-form-field>
+              <br/>
+              <mat-form-field appearance="fill">
+                <mat-label>DeadLine</mat-label>
+                <input matInput [matDatepicker]="picker" name="deadLine" ngModel/>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <br/>
+
+              <button mat-stroked-button color="primary">Add</button>
+              <button mat-stroked-button color="primary">Clear</button>
+
+        </form>
+
+        
+         <table border="1" class="tracker">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Task</th>
+                    <th>DeadLine</th>
+                </tr>
+            
+                <tr *ngFor="let tracker of listofData">
+                    <td>{{tracker.id}}</td>
+                    <td>{{tracker.name}}</td>
+                    <td>{{tracker.task}}</td>
+                    <td>{{tracker.deadLine}}</td>
+                </tr>
+            
+        </table>
+    </div>
+</div>
