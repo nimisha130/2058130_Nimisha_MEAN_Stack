@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+        var socket = io();
+        socket.emit("obj","Hello Server I am Web Socket Client");
+        socket.on("obj1",(msg)=> {
+            console.log(msg);
+        })
+
+        // var chatting = document.getElementById("chatting");
+        // var msgInfo = document.getElementById("msgInfo");
+        
+
+        function chatInfo(){
+            
+            let name = document.getElementById("userName").value;
+
+            let chatMessages = document.getElementById("msgInfo").value;
+            
+            if(chatMessages){
+                socket.emit("obj2",name,chatMessages);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h2>ChatLog</h2>
+    
+    <form id = "chatting">
+        <label>Name:</label>
+        <input type="text" name="user" id="userName"/>
+        <br/>
+        <label>Messages:</label>
+        <input type="textarea" name="chatMessages" id="msgsInfo"/>
+        <br/>
+        
+        <input type="button" value="Send" onclick="chatInfo()"/>
+    </form>
+
+</body>
+</html>
